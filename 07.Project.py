@@ -12,6 +12,9 @@ def parse_dms(dms_str):
     if len(parse) != 2:
         return None
     min = int(parse[0])
+    parse = parse[1].split('"')
+    if len(parse) != 2:
+        return None
     sec_str = parse[1].replace('"', ''.strip)
     if sec_str.isdigit():
         sec = int(sec_str)
@@ -26,7 +29,7 @@ for line in inputfile:
         deg, min, sec = parse_line
         decimal_degree = float(DD(deg, min, sec))
     else:
-        outputfile.write("\n")
+        outputfile.write(line)
         Outputrecord += 1
     line = inputfile.readline()
 outputfile.close()
