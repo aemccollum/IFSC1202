@@ -24,7 +24,7 @@ z = [0, 1, 2]
 for i in range(len(zipcodes)):
     print("Zipcode",z[0])
 	print("Count",z[1])
-	print("Average",z[2]/z[1])
+	print("Average","$"z[2]/z[1])
 	
 		 
 		 
